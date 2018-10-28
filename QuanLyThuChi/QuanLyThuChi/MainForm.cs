@@ -172,18 +172,14 @@ namespace QuanLyThuChi
 
         private void btndkhangmucchi_ItemClick(object sender, ItemClickEventArgs e)
         {
-            frm_DangKyHangMucThu pg = new frm_DangKyHangMucThu();
-            if (ExistForm(pg))
-                return;
+            Page_DKkhoanthu pg = new Page_DKkhoanthu();
             pg.MdiParent = this;
             pg.Show();
         }
 
         private void btndkhangmucthu_ItemClick(object sender, ItemClickEventArgs e)
         {
-            frm_DangKyKhoanChi pg = new frm_DangKyKhoanChi();
-            if (ExistForm(pg))
-                return;
+            frm_girddkkhoanchi pg = new frm_girddkkhoanchi();
             pg.MdiParent = this;
             pg.Show();
         }
@@ -198,9 +194,9 @@ namespace QuanLyThuChi
         private void barButtonItem10_ItemClick(object sender, ItemClickEventArgs e)
         {
             frmDoiMK frmdoimk = new frmDoiMK();
-            frmdoimk.ShowDialog();
-            //frmdoimk.MdiParent = this;
-            //frmdoimk.Show();
+            //frmdoimk.ShowDialog();
+            frmdoimk.MdiParent = this;
+            frmdoimk.Show();
         }
 
        
@@ -215,24 +211,13 @@ namespace QuanLyThuChi
 
         private void barButtonItem6_ItemClick(object sender, ItemClickEventArgs e)
         {
-
-        }
-
-        public void KT()
-        {
-            foreach (RibbonPage group in ribbonControl.Pages)
-            {
-                MessageBox.Show(group.Text);
-            }
             frm_PhanQuyen frm = new frm_PhanQuyen();
             frm.MdiParent = this;
             frm.Show();
             StartPosition = FormStartPosition.CenterParent;
         }
 
-
-
-        private bool ExistForm(Form a)
+        private void barButtonItem19_ItemClick(object sender, ItemClickEventArgs e)
         {
             frm_QL_NhomNguoiDung frm = new frm_QL_NhomNguoiDung();
             frm.MdiParent = this;
@@ -240,14 +225,8 @@ namespace QuanLyThuChi
             StartPosition = FormStartPosition.CenterParent;
         }
 
-        private void btn_dktiente_ItemClick(object sender, ItemClickEventArgs e)
         private void barButtonItem20_ItemClick(object sender, ItemClickEventArgs e)
         {
-            frm_DangKyTienTe pg = new frm_DangKyTienTe();
-            if (ExistForm(pg))
-                return;
-            pg.MdiParent = this;
-            pg.Show();
             frmQL_NguoiDung_NhomNguoiDung frm = new frmQL_NguoiDung_NhomNguoiDung();
             frm.MdiParent = this;
             frm.Show();
